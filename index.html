@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【閉店・放置アーカイブ】居酒屋 アキト氷 (現：ゆめるん喫茶)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Yuji+Syuku&family=Kiwi+Maru:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            woodDark: '#120c08',
+            woodMedium: '#221610',
+            woodLight: '#3a271d',
+            amberGlow: '#d97706',
+            paperBg: '#fbf8f2',
+            brandRed: '#8c1d18',
+            crabRed: '#b91c1c',
+            friendTeal: '#134e4a',
+            // Sister's Cafe Colors
+            yumePink: '#ffb7c5',
+            yumePinkDark: '#e67389',
+            yumeCream: '#fffbf0',
+            yumeMint: '#a3e4d7',
+            yumePurple: '#d7bfdc'
+          },
+          fontFamily: {
+            mincho: ['"Shippori Mincho"', '"Yu Mincho"', 'Georgia', 'serif'],
+            calligraphy: ['"Yuji Syuku"', 'serif'],
+            cute: ['"Kiwi Maru"', 'cursive', 'sans-serif'],
+            sans: ['"Yu Gothic"', '"Meiryo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0d0805;
+      background-image: radial-gradient(circle at 50% 20%, #26160d 0%, #0d0805 80%);
+      color: #333333;
+    }
+    
+    .wood-texture {
+      background: linear-gradient(180deg, #2a1b13 0%, #1a100b 100%);
+      border: 1px solid #3d281c;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    }
+
+    .paper-texture {
+      background-color: #faf6f0;
+      background-image: radial-gradient(#e5dbce 0.75px, transparent 0.75px);
+      background-size: 12px 12px;
+    }
+
+    .yume-card-gradient {
+      background: linear-gradient(135deg, #fff5f7 0%, #fffbf0 50%, #f3e8f8 100%);
+    }
+
+    .friend-card-gradient {
+      background: linear-gradient(135deg, #0f2926 0%, #091715 100%);
+    }
+
+    .dashed-border-pink {
+      border: 2px dashed #f48fb1;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #120c08;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3a271d;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Top Notice Bar -->
+  <div class="bg-brandRed text-amber-100 text-xs md:text-sm py-2.5 px-4 shadow-lg border-b border-red-900 sticky top-0 z-40">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-1 text-center md:text-left">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block bg-white text-brandRed font-bold text-[10px] px-2 py-0.5 rounded">NEW お知らせ</span>
+        <span class="font-bold">【約3ヶ月ぶりの更新】「アキト蟹」赤字閉業と店舗解体についてのポリシー</span>
+      </div>
+      <a href="#yumerun-section" class="text-xs bg-amber-400 text-stone-900 font-bold px-3 py-1 rounded-full hover:bg-amber-300 transition-colors animate-pulse">
+        ✨ 妹の喫茶店 予約へ ➔
+      </a>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="wood-texture text-amber-100 py-8 px-4 border-b-4 border-amber-800 relative overflow-hidden">
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+      
+      <!-- Brand Logo / Title -->
+      <div class="text-center md:text-left">
+        <div class="text-xs text-amber-500 tracking-widest font-mincho mb-1">福岡・天神路地裏 氷温熟成と炭火串焼き</div>
+        <h1 class="text-3xl md:text-5xl font-calligraphy font-bold text-amber-100 tracking-wider flex items-center justify-center md:justify-start gap-3">
+          <span class="inline-block text-amber-500 border border-amber-600/40 p-1 rounded text-2xl md:text-4xl">氷</span>
+          居酒屋 アキト氷
+        </h1>
+        <p class="text-xs text-stone-400 mt-2 font-mincho">※当ホームページは閉業後の店舗記録および最新の店舗継承情報を放置・公開している公式アーカイブです</p>
+      </div>
+
+      <!-- Closed Contact Box -->
+      <div class="bg-woodDark/90 p-4 rounded-lg border border-amber-900/50 text-center w-full md:w-auto opacity-80 shadow-md">
+        <div class="text-xs text-amber-500 font-bold mb-1">【旧・居酒屋アキト氷 お電話】</div>
+        <div class="text-lg md:text-xl font-mono text-stone-500 line-through">092-714-XXXX</div>
+        <div class="text-[10px] text-red-400 mt-1 font-bold">※居酒屋の電話は現在不通です</div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-5xl mx-auto my-6 px-3 md:px-4 flex-grow w-full space-y-8">
+
+    <!-- LATEST UPDATE BANNER (3 MONTHS LATER & DEMOLITION PHILOSOPHY) -->
+    <section class="paper-texture p-6 md:p-8 rounded-xl shadow-2xl border-2 border-amber-800 relative overflow-hidden">
+      <div class="absolute top-0 right-0 bg-red-800 text-white font-mono text-[10px] font-bold px-4 py-1 rounded-bl-lg shadow">
+        UPDATE: 2026.10.25 (約3ヶ月ぶりの更新)
+      </div>
+
+      <div class="flex flex-col md:flex-row items-start gap-5">
+        <div class="flex-shrink-0 text-center w-full md:w-auto">
+          <div class="w-20 h-20 bg-stone-900 text-amber-400 rounded-full border-2 border-amber-600 flex items-center justify-center text-3xl mx-auto shadow">
+            📢
+          </div>
+          <span class="inline-block text-[10px] text-stone-500 font-bold mt-2">店主・アキトより</span>
+        </div>
+
+        <div class="flex-grow space-y-3 font-mincho">
+          <div class="inline-block bg-red-100 text-red-800 font-bold text-xs px-2.5 py-0.5 rounded border border-red-200">
+            【ご報告】「カニ専門店 アキト蟹」閉業と店舗受け継ぎのお知らせ
+          </div>
+          
+          <h2 class="text-lg md:text-xl font-bold text-stone-900 leading-snug">
+            「アキト蟹」は赤字により閉業いたしました。皆様ありがとうございました！<br class="hidden sm:inline">
+            そして——私たちは決して店舗を「解体して更地」にはいたしません。
+          </h2>
+
+          <p class="text-xs md:text-sm text-stone-700 leading-relaxed font-sans">
+            約3ヶ月ぶりのサイト更新となります。<br>
+            ゆめるん喫茶の旧跡地にて挑戦した<strong>「カニ専門店 アキト蟹」</strong>ですが、力不足もあり赤字が続いてしまったため、誠に勝手ながら閉業させていただくこととなりました。短い間でしたが、足を運んでくださった皆様、本当にありがとうございました！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL FEATURE: ABOUT STORE DEMOLITION (解体について) -->
+    <section class="wood-texture rounded-2xl p-6 md:p-8 shadow-2xl border-2 border-amber-600/80 text-amber-100 relative overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 text-9xl text-amber-500/5 select-none pointer-events-none font-calligraphy">
+        絆
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-5">
+        <div class="text-center space-y-2 border-b border-amber-800/80 pb-4">
+          <span class="bg-amber-800/80 text-amber-200 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/50">
+            店主・アキトの信念
+          </span>
+          <h2 class="text-2xl md:text-3xl font-calligraphy font-bold text-amber-300">
+            【解体について】〜想いの詰まった店舗を更地にはしない〜
+          </h2>
+        </div>
+
+        <div class="bg-woodDark/80 p-5 md:p-6 rounded-xl border border-amber-900/60 font-mincho text-stone-200 leading-relaxed text-sm md:text-base space-y-4">
+          <p class="text-amber-200 font-bold text-base md:text-lg leading-snug border-l-4 border-amber-500 pl-3">
+            ほとんどの店舗は、閉業してしまうとほとんどが解体工事を行い、更地になり不動産などで売られています。<br class="hidden sm:inline">
+            ただ、アキト氷とアキト蟹は、そんなことをしません。友人や兄弟姉妹などが引き継いでいます。
+          </p>
+
+          <p class="text-xs md:text-sm text-stone-300 font-sans leading-relaxed">
+            店舗には、職人が手掛けた木造の温も増や、そこで過ごしたお客様・スタッフの思い出がたくさん詰まっています。数か月で解体業者を呼んで重機で壊し、冷たい「更地」にして不動産市場に売り払うのは簡単ですが、あまりにももったいなく、切ないことです。
+          </p>
+
+          <p class="text-xs md:text-sm text-stone-300 font-sans leading-relaxed">
+            だからこそ、<strong>「居酒屋 アキト氷」</strong>を閉めるときは妹に声をかけ、<strong>『ゆめるん喫茶』</strong>として生まれ変わらせました。<br>
+            そして、今回赤字でたたむことになった<strong>「アキト蟹」</strong>の店舗も、解体することなく<strong>『信頼できる友人』</strong>がそのまま引き継ぎ、新しいお店を開いてくれました。<br>
+            形や業態は変わっても、人から人へ、バトンは受け継がれ続けています。
+          </p>
+        </div>
+
+        <!-- Comparison Table / Card -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-sans text-xs">
+          <div class="bg-red-950/40 p-4 rounded-lg border border-red-900/60 text-stone-300">
+            <div class="text-red-400 font-bold mb-1 flex items-center gap-1.5">
+              <span>✕</span> 一般的な店舗の閉店
+            </div>
+            <p class="text-[11px] leading-normal text-stone-400">
+              閉業 ➔ 多額の費用で解体工事 ➔ 骨組みも消えて更地へ ➔ 不動産売却（思い出の消失）
+            </p>
+          </div>
+
+          <div class="bg-emerald-950/40 p-4 rounded-lg border border-emerald-800/60 text-emerald-100">
+            <div class="text-emerald-300 font-bold mb-1 flex items-center gap-1.5">
+              <span>◯</span> アキト氷・アキト蟹の流儀
+            </div>
+            <p class="text-[11px] leading-normal text-emerald-200/80">
+              閉業 ➔ <strong>解体ゼロ！</strong> ➔ 妹（ゆめるん喫茶）や友人へ引き継ぎ ➔ 温もりと空間の継承
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 1: SISTER'S CAFE RELOCATION & RESERVATION -->
+    <section id="yumerun-section" class="yume-card-gradient rounded-2xl p-6 md:p-8 shadow-2xl border-4 border-yumePink relative overflow-hidden">
+      <!-- Cute Badge -->
+      <div class="absolute -right-8 -top-8 bg-yumePinkDark text-white font-cute text-xs font-bold px-10 py-3 rotate-45 shadow-md">
+        元気に営業中!
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <!-- Cafe Mascot Icon -->
+        <div class="flex-shrink-0 text-center">
+          <div class="w-28 h-28 md:w-36 md:h-36 bg-white rounded-full border-4 border-yumePink shadow-inner flex items-center justify-center text-5xl md:text-6xl relative">
+            🍨
+            <span class="absolute -bottom-2 bg-yumePinkDark text-white font-cute text-[10px] px-2 py-0.5 rounded-full shadow">
+              アキトの妹のお店
+            </span>
+          </div>
+        </div>
+
+        <!-- Announcement Body -->
+        <div class="flex-grow text-center md:text-left space-y-3">
+          <div class="inline-block bg-yumePink/30 text-yumePinkDark font-cute font-bold text-xs px-3 py-1 rounded-full border border-yumePink">
+            ✨ 旧・居酒屋アキト氷 跡地 ✨
+          </div>
+          <h2 class="text-2xl md:text-3xl font-cute font-bold text-stone-800 tracking-wide">
+            妹のレトロ＆ゆめかわ喫茶<br class="hidden sm:inline">
+            <span class="text-yumePinkDark text-3xl md:text-4xl">『ゆめるん喫茶』</span> 大好評営業中！
+          </h2>
+          <p class="text-xs md:text-sm text-stone-700 leading-relaxed font-sans">
+            お兄ちゃん（アキト）の「更地にして解体するのは絶対にもったいない！」という想いから、この場所へ移転したゆめるん喫茶。お兄ちゃん直伝の「氷削り技術」で作る特製ふわふわかき氷が大人気です！
+          </p>
+        </div>
+      </div>
+
+      <!-- RESERVATION NOTICE & BUTTON -->
+      <div class="mt-6 bg-white/90 p-5 rounded-xl dashed-border-pink text-center space-y-3 shadow-sm">
+        <div class="text-sm md:text-base font-bold text-stone-800 font-cute">
+          🎀 「ゆめるん喫茶」のお席・ご予約はこちら（Web受付） 🎀
+        </div>
+        <p class="text-xs text-red-600 font-bold bg-red-50 py-1.5 px-3 rounded-md inline-block border border-red-200">
+          ⚠️ ※こちらは『ゆめるん喫茶』の予約フォームです（居酒屋 アキト氷の予約ではありません）
+        </p>
+        <div>
+          <button onclick="openYumeModal()" class="bg-gradient-to-r from-yumePinkDark to-yumePink hover:from-pink-600 hover:to-pink-400 text-white font-cute font-bold text-base md:text-lg px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mx-auto">
+            <span>📅</span> ゆめるん喫茶をご予約する（アキト氷跡地） ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FRIEND'S NEW SHOP (元・ゆめるん喫茶 跡地 / 元・アキト蟹 跡地) -->
+    <section class="friend-card-gradient rounded-xl p-6 shadow-xl border-2 border-teal-700 text-teal-100 flex flex-col md:flex-row items-center justify-between gap-6 relative">
+      <div class="flex items-center gap-4">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-teal-950 rounded-full border-2 border-teal-400 flex items-center justify-center text-3xl md:text-4xl flex-shrink-0 shadow">
+          🍻
+        </div>
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">友人の新店舗</span>
+            <span class="text-xs text-teal-300 font-mincho">※解体せず友人が引き継ぎ！</span>
+          </div>
+          <h3 class="text-lg md:text-xl font-mincho font-bold text-teal-200">
+            元・アキト蟹の店舗も解体せず、友人が新しくお店を開いてくれました！
+          </h3>
+          <p class="text-xs text-teal-200/80 leading-relaxed font-sans">
+            「カニ専門店 アキト蟹」は赤字のため閉業となりましたが、不動産に売って更地にすることはせず、アキトの友人がお店ごと引き継いでくれました。温もり溢れる空間で新店舗が元気いっぱいに営業中です！
+          </p>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 w-full md:w-auto text-center">
+        <div class="bg-black/50 p-3 rounded-lg border border-teal-800 text-xs">
+          <div class="text-teal-300 font-bold mb-1">【友人の新店舗（大名店）】</div>
+          <p class="text-teal-200/70 text-[11px] mb-2">旧ゆめるん喫茶・アキト蟹 跡地</p>
+          <button onclick="alert('友人の新店舗へのお問い合わせや応援メッセージは、店頭にて受付け中です！更地にせず受け継いでくれた友人に感謝！')" class="bg-teal-700 hover:bg-teal-600 text-teal-100 text-xs font-bold px-4 py-2 rounded border border-teal-400/40 transition-colors w-full md:w-auto">
+            ✨ 友人の店を見る ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHIVE SECTION: OLD IZAKAYA WEBPAGE CONTENT & TIMELINE -->
+    <div class="border-t-2 border-dashed border-amber-900/60 pt-6">
+      
+      <div class="text-center mb-6">
+        <span class="bg-woodDark text-amber-500 font-mincho text-xs px-4 py-1.5 rounded-full border border-amber-800 shadow">
+          📜 以下は旧「居酒屋 アキト氷」の公式Webアーカイブです
+        </span>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="flex flex-wrap gap-2 mb-4 border-b border-amber-900/60 pb-2">
+        <button onclick="switchTab('family')" id="tab-family" class="tab-btn active-tab bg-amber-700 text-amber-100 px-5 py-2 rounded-t font-mincho font-bold text-sm md:text-base hover:bg-amber-600 transition-colors">
+          🗺️ 店舗継承・移転マップ
+        </button>
+        <button onclick="switchTab('menu')" id="tab-menu" class="tab-btn bg-woodMedium text-stone-400 px-5 py-2 rounded-t font-mincho font-bold text-sm md:text-base hover:bg-woodLight hover:text-amber-200 transition-colors">
+          名物お品書き（過去）
+        </button>
+        <button onclick="switchTab('messages')" id="tab-messages" class="tab-btn bg-woodMedium text-stone-400 px-5 py-2 rounded-t font-mincho font-bold text-sm md:text-base hover:bg-woodLight hover:text-amber-200 transition-colors">
+          常連様の寄せ書き帳
+        </button>
+      </div>
+
+      <!-- TAB 1: STORE RELATIONSHIP MAP -->
+      <div id="content-family" class="tab-content block">
+        <div class="paper-texture p-6 rounded-b-lg rounded-tr-lg border border-amber-900/40 text-stone-800 font-mincho">
+          <h3 class="text-lg font-bold text-amber-950 mb-3 border-b border-amber-800/30 pb-2 flex items-center justify-between">
+            <span>🗺️ 更地化ゼロ！店舗シャッフル＆継承の歴史</span>
+            <span class="text-xs font-normal text-stone-500">「解体しない」絆のストーリー</span>
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Location A -->
+            <div class="bg-amber-100/80 p-4 rounded-xl border-2 border-amber-400 space-y-2">
+              <div class="bg-amber-800 text-amber-100 text-xs font-bold px-2.5 py-1 rounded inline-block">
+                📍 場所 A（天神・居酒屋アキト氷 跡地）
+              </div>
+              <div class="text-xs space-y-1 pt-1">
+                <p class="line-through text-stone-500">1. 居酒屋 アキト氷（完全閉店）</p>
+                <div class="text-emerald-700 font-bold text-[11px] pl-3">✕ 解体工事・更地化は絶対ナシ！</div>
+                <p class="text-yumePinkDark font-bold text-sm pl-3">2. 妹の店『ゆめるん喫茶』（★大好評営業中！）</p>
+              </div>
+              <p class="text-[11px] text-stone-600 pt-2 border-t border-amber-300">
+                ※こだわりの内装や氷の設備を妹が引き継ぎ、レトロ可愛いカフェとしてにぎわっています。
+              </p>
+            </div>
+
+            <!-- Location B -->
+            <div class="bg-teal-50 p-4 rounded-xl border-2 border-teal-300 space-y-2">
+              <div class="bg-teal-900 text-teal-100 text-xs font-bold px-2.5 py-1 rounded inline-block">
+                📍 場所 B（大名・ゆめるん旧店舗 跡地）
+              </div>
+              <div class="text-xs space-y-1 pt-1">
+                <p class="line-through text-stone-400">1. ゆめるん喫茶 旧店舗（移転）</p>
+                <div class="text-stone-400 text-[10px] pl-3">↓ 兄が引き継ぎ</div>
+                <p class="line-through text-red-600 font-bold">2. 兄の店『カニ専門店 アキト蟹』（赤字閉業）</p>
+                <div class="text-emerald-700 font-bold text-[11px] pl-3">✕ 解体工事・更地化は絶対ナシ！</div>
+                <p class="text-teal-800 font-bold text-sm pl-3">3. 友人の新店舗（★解体せず開店・営業中！）</p>
+              </div>
+              <p class="text-[11px] text-stone-600 pt-2 border-t border-teal-200">
+                ※アキト蟹は赤字撤退となりましたが、解体せず友人が温かい雰囲気のお店を開いてくれました。
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: MENU ARCHIVE -->
+      <div id="content-menu" class="tab-content hidden">
+        <div class="wood-texture p-6 rounded-b-lg rounded-tr-lg border border-amber-900/40 text-amber-100">
+          
+          <div class="mb-6 bg-amber-950/60 p-3 rounded border border-amber-800/40 text-xs md:text-sm text-amber-300">
+            🍶 <strong>居酒屋 アキト氷の名物メニュー：</strong> クリックすると当時の詳細をご覧いただけます。
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="bg-woodDark/80 p-4 rounded border border-amber-900/40 hover:border-amber-600/60 transition-all cursor-pointer" onclick="openMenuModal('名物 氷煮込み（牛すじ＆大根）', 'マイナス1.5度でじっくり寝かせた牛すじを、特製ダシと極小のかき氷出汁でじっくり煮込んだ、口の中でとろける看板メニュー。', '680円')">
+              <div class="flex justify-between items-start mb-1">
+                <span class="font-bold text-amber-100 font-mincho text-base">名物 氷煮込み（牛すじ）</span>
+                <span class="text-amber-400 font-mono text-sm">680円</span>
+              </div>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                氷温熟成肉と特製出汁の深い旨味。トロトロの食感が大人気でした。
+              </p>
+            </div>
+
+            <div class="bg-woodDark/80 p-4 rounded border border-amber-900/40 hover:border-amber-600/60 transition-all cursor-pointer" onclick="openMenuModal('氷結生レモンサワー', '国産レモンを丸ごと凍らせ、削り氷状に削り落とした究極の爽快サワー。', '550円')">
+              <div class="flex justify-between items-start mb-1">
+                <span class="font-bold text-amber-100 font-mincho text-base">氷結生レモンサワー</span>
+                <span class="text-amber-400 font-mono text-sm">550円</span>
+              </div>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                凍らせたレモンをそのまま削った名物ドリンク。
+              </p>
+            </div>
+
+            <div class="bg-woodDark/80 p-4 rounded border border-amber-900/40 hover:border-amber-600/60 transition-all cursor-pointer" onclick="openMenuModal('氷温熟成 刺身盛り合わせ（五種）', '玄海水揚げの新鮮な魚を限界温度で寝かせ、旨味成分を最大化した豪華盛り合わせ。', '1,880円')">
+              <div class="flex justify-between items-start mb-1">
+                <span class="font-bold text-amber-100 font-mincho text-base">氷温熟成 刺身盛り合わせ</span>
+                <span class="text-amber-400 font-mono text-sm">1,880円</span>
+              </div>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                旨味が極限まで引き出された自慢のお刺身。
+              </p>
+            </div>
+
+            <div class="bg-woodDark/80 p-4 rounded border border-amber-900/40 hover:border-amber-600/60 transition-all cursor-pointer" onclick="openMenuModal('特製ふわふわ削り氷（いちご/抹茶）', '現在のゆめるん喫茶のかき氷のルーツとなった伝説の居酒屋シメスイーツ。', '480円')">
+              <div class="flex justify-between items-start mb-1">
+                <span class="font-bold text-amber-100 font-mincho text-base">特製ふわふわ削り氷</span>
+                <span class="text-amber-400 font-mono text-sm">480円</span>
+              </div>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                妹のゆめるん喫茶へ技術継承された思い出の味。
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: GUESTBOOK ARCHIVE -->
+      <div id="content-messages" class="tab-content hidden">
+        <div class="paper-texture p-6 rounded-b-lg rounded-tr-lg border border-amber-900/40 text-stone-800 font-mincho">
+          <h3 class="text-lg font-bold text-amber-950 mb-4 border-b border-amber-800/30 pb-2">
+            📖 常連様からのメッセージメモリアル
+          </h3>
+          <div class="space-y-4 text-xs md:text-sm">
+            <div class="bg-teal-50 p-3 rounded border border-teal-200">
+              <div class="flex justify-between font-bold text-teal-950 mb-1">
+                <span>常連Sさん</span>
+                <span class="text-stone-500 text-[11px]">2026.10.25 (NEW)</span>
+              </div>
+              <p class="text-stone-700">普通のお店なら閉業したら解体して更地になっちゃうのに、アキトさんは妹さんや友人さんに引き継いで店舗を残してくれるのが本当に素敵です！友人の新店舗も絶対行きます！</p>
+            </div>
+            <div class="bg-amber-100/70 p-3 rounded border border-amber-300">
+              <div class="flex justify-between font-bold text-amber-900 mb-1">
+                <span>会社員 T.K様（天神勤務）</span>
+                <span class="text-stone-500 text-[11px]">2023.03.28</span>
+              </div>
+              <p class="text-stone-700">金曜日の仕事終わりに飲む氷結レモンサワーが最高の癒やしでした！内装を解体せずに妹さんの喫茶店に受け継がれると聞いて嬉しいです。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- MODAL 1: YUMERUN KISSA RESERVATION FORM -->
+  <div id="yumeModal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 hidden backdrop-blur-sm" onclick="closeYumeModal()">
+    <div class="yume-card-gradient max-w-lg w-full p-6 md:p-8 rounded-2xl shadow-2xl border-4 border-yumePink relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
+      
+      <!-- Close Button -->
+      <button onclick="closeYumeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-800 text-xl font-bold bg-white w-8 h-8 rounded-full shadow flex items-center justify-center">✕</button>
+
+      <!-- Modal Header -->
+      <div class="text-center mb-5">
+        <span class="bg-yumePink text-white font-cute text-xs px-3 py-1 rounded-full">Web予約フォーム</span>
+        <h3 class="text-2xl font-cute font-bold text-stone-800 mt-2">🎀 ゆめるん喫茶 ご来店予約</h3>
+        <p class="text-xs text-red-600 font-bold mt-1 bg-red-100/90 py-1.5 px-2 rounded border border-red-200">
+          ⚠️ ※こちらは『ゆめるん喫茶』の予約フォームです（居酒屋 アキト氷の予約ではありません）
+        </p>
+      </div>
+
+      <!-- Form Area -->
+      <form id="reservationForm" onsubmit="submitReservation(event)" class="space-y-4 font-sans text-xs md:text-sm">
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">ご来店ご希望日 <span class="text-red-500">*</span></label>
+          <input type="date" required class="w-full p-2.5 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-yumePink font-mono">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">ご来店時間 <span class="text-red-500">*</span></label>
+            <select required class="w-full p-2.5 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-yumePink">
+              <option value="">選択してください</option>
+              <option>11:00 (カフェランチ)</option>
+              <option>13:00 (ティータイム)</option>
+              <option>15:00 (カフェタイム)</option>
+              <option>17:00 (夕暮れカフェ)</option>
+              <option>19:00 (夜カフェ)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">ご人数 <span class="text-red-500">*</span></label>
+            <select required class="w-full p-2.5 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-yumePink">
+              <option value="1">1名様</option>
+              <option value="2">2名様</option>
+              <option value="3">3名様</option>
+              <option value="4">4名様以上</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">お名前 (フリガナ) <span class="text-red-500">*</span></label>
+          <input type="text" required placeholder="例：ユメノ ミカ" class="w-full p-2.5 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-yumePink">
+        </div>
+
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">お電話番号 <span class="text-red-500">*</span></label>
+          <input type="tel" required placeholder="090-XXXX-XXXX" class="w-full p-2.5 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-yumePink font-mono">
+        </div>
+
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">ご要望・メッセージ</label>
+          <textarea rows="2" placeholder="特製ふわふわかき氷のご予約希望など" class="w-full p-2.5 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-yumePink"></textarea>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full bg-yumePinkDark hover:bg-pink-600 text-white font-cute font-bold text-base py-3.5 rounded-xl shadow-lg transition-colors">
+            🎀 ゆめるん喫茶（アキト氷跡地）を予約する
+          </button>
+        </div>
+      </form>
+
+      <!-- Reservation Success Notification -->
+      <div id="resSuccess" class="hidden text-center space-y-4 py-6">
+        <div class="text-5xl">🎉</div>
+        <h4 class="text-xl font-cute font-bold text-yumePinkDark">ご予約ありがとうございます！</h4>
+        <p class="text-xs text-stone-700 leading-relaxed">
+          『ゆめるん喫茶』へのご予約申請を受け付けました。<br>
+          確認のため、ご入力いただいたお電話番号へご連絡差し上げる場合がございます。
+        </p>
+        <div class="bg-white p-3 rounded-lg border border-pink-200 text-xs text-stone-600">
+          📍 場所：旧・居酒屋アキト氷 跡地店舗（解体せずそのまま活用）
+        </div>
+        <button onclick="closeYumeModal()" class="bg-stone-800 text-white text-xs px-6 py-2 rounded-full font-bold">
+          閉じる
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL 2: IZAKAYA MENU DETAIL MODAL -->
+  <div id="menuModal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 hidden backdrop-blur-sm" onclick="closeMenuModal()">
+    <div class="paper-texture max-w-md w-full p-6 rounded-lg shadow-2xl border-2 border-amber-900 relative" onclick="event.stopPropagation()">
+      <button onclick="closeMenuModal()" class="absolute top-3 right-3 text-stone-500 hover:text-stone-800 text-xl font-bold">✕</button>
+      <div class="text-xs text-amber-800 font-bold mb-1">居酒屋 アキト氷 復刻メモリアル</div>
+      <h3 id="modalTitle" class="text-xl font-mincho font-bold text-stone-900 mb-2 border-b border-stone-300 pb-1"></h3>
+      <div id="modalPrice" class="text-amber-700 font-mono font-bold text-lg mb-3"></div>
+      <p id="modalDesc" class="text-stone-700 text-sm leading-relaxed font-mincho mb-4"></p>
+      <div class="text-center">
+        <button onclick="closeMenuModal()" class="bg-amber-800 hover:bg-amber-900 text-amber-100 text-xs px-6 py-2 rounded font-bold transition-colors">
+          閉じる
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-woodDark border-t border-amber-900/60 text-stone-500 text-xs py-8 px-4 text-center mt-12">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <p class="text-stone-400">
+        居酒屋 アキト氷 公式ホームページ（解体ゼロ・店舗継承アーカイブ）<br>
+        現在この場所は妹のカフェ<strong>「ゆめるん喫茶」</strong>として営業しております。<br>
+        また、旧ゆめるん喫茶跡地（旧アキト蟹）は解体せず<strong>「友人の新店舗」</strong>として営業中です。
+      </p>
+      <p class="font-mono text-[10px] text-stone-700">
+        &copy; 2008-2026 Izakaya Akito-Koori / Yumerun Kissa All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function switchTab(tabName) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(el => el.classList.add('hidden'));
+
+      const tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach(el => {
+        el.classList.remove('bg-amber-700', 'text-amber-100');
+        el.classList.add('bg-woodMedium', 'text-stone-400');
+      });
+
+      const targetContent = document.getElementById('content-' + tabName);
+      if (targetContent) targetContent.classList.remove('hidden');
+
+      const activeTab = document.getElementById('tab-' + tabName);
+      if (activeTab) {
+        activeTab.classList.remove('bg-woodMedium', 'text-stone-400');
+        activeTab.classList.add('bg-amber-700', 'text-amber-100');
+      }
+    }
+
+    // Yumerun Modal Controls
+    function openYumeModal() {
+      document.getElementById('reservationForm').classList.remove('hidden');
+      document.getElementById('resSuccess').classList.add('hidden');
+      document.getElementById('yumeModal').classList.remove('hidden');
+    }
+
+    function closeYumeModal() {
+      document.getElementById('yumeModal').classList.add('hidden');
+    }
+
+    function submitReservation(e) {
+      e.preventDefault();
+      document.getElementById('reservationForm').classList.add('hidden');
+      document.getElementById('resSuccess').classList.remove('hidden');
+    }
+
+    // Izakaya Menu Modal Controls
+    function openMenuModal(title, desc, price) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('menuModal').classList.remove('hidden');
+    }
+
+    function closeMenuModal() {
+      document.getElementById('menuModal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
